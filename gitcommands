@@ -1,0 +1,7 @@
+cd client
+git init
+git add .
+git commit -m "Frontend ready"
+git branch -M main
+git remote add origin https://github.com/logitechsabarni/health-journal-frontend.git
+git push -u origin main
