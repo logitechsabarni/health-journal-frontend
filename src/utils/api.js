@@ -1,13 +1,12 @@
-import axios from 'axios';
+const BASE_URL = import.meta.env.VITE_API_URL;
 
-const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
-});
+export const registerUser = async (userData) => {
+  const response = await fetch(`${BASE_URL}/api/users/register`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(userData),
+  });
+  return response.json();
+};
 
-API.interceptors.request.use((req) => {
-  const token = localStorage.getItem('token');
-  if (token) req.headers.Authorization = `Bearer ${token}`;
-  return req;
-});
-
-export default API;
+// and similar for login, entries, etc.
