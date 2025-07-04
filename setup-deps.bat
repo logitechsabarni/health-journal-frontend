@@ -1,14 +1,14 @@
-@echo off
 cd client
 
-echo Installing dependencies from package.json...
-npm install
+echo Installing dependencies...
+npm install react-scripts react-chartjs-2 chart.js
 
-echo Adding updated files to Git...
+echo Adding files to Git...
 git add package.json package-lock.json
 
 echo Committing the changes...
-git commit -m "Fix: Added react-scripts and chart dependencies"
+git commit -m "Fix: Ensured all required dependencies are installed"
+
 echo Pushing to GitHub...
 git push origin main
 
