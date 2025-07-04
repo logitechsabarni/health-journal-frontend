@@ -3,7 +3,8 @@ echo Navigating to client folder...
 cd client
 
 echo Installing required dependencies: react-chartjs-2 and chart.js ...
-npm install react-chartjs-2 chart.js
+npm install react-chartjs-2 chart.js react-scripts
+
 
 echo Going back to root folder...
 cd ..
